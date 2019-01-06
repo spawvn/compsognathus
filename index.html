@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Compsognathus</title>
+
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+
+        <script type="text/javascript" src="src/js/main.js"></script>
+        <link rel="stylesheet" type="text/css" href="src/css/main.css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+        <script type="text/javascript">
+            document.addEventListener("DOMContentLoaded", () => {
+                const compsognathus = new Compsognathus();
+                compsognathus.init();
+            });
+        </script>
+    </head>
+    <body>
+        <div id="content" class="content hidden">
+            <div class="header-wrapper">
+                <div class="header">
+                    <img class="title-icon" alt="Happy" src="public/img/happy.png" />
+                    <h2 class="title">
+                        Dashboard
+                    </h2>
+                </div>
+            </div>
+            <div class="controls">
+                <input id="comment-filter" class="comment-filter" type="text" placeholder="Search here…" />
+                <div id="rating-filter" class="rating-filter">
+                    <div class="rating-filter-button inactive" data-rating="1">
+                        1
+                    </div>
+                    <div class="rating-filter-button inactive" data-rating="2">
+                        2
+                    </div>
+                    <div class="rating-filter-button inactive" data-rating="3">
+                        3
+                    </div>
+                    <div class="rating-filter-button inactive" data-rating="4">
+                        4
+                    </div>
+                    <div class="rating-filter-button inactive" data-rating="5">
+                        5
+                    </div>
+                </div>
+            </div>
+            <div id="results" class="results">
+
+            </div>
+            <div id="no-results" class="no-results">
+                <p class="notification">
+                    Nothing found<br/>
+                    Please simplify your request and find joy in small things
+                </p>
+            </div>
+        </div>
+        <div id="loader-main" class="loader-main"></div>
+    </body>
+</html>

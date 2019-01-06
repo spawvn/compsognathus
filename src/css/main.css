@@ -1,0 +1,159 @@
+html, body {
+    font-family: 'Roboto', sans-serif;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    font-size: 16px;
+    background: #EEF3F7;
+}
+
+@media screen and (max-width: 600px) {
+    body {
+        font-size: 14px;
+    }
+}
+@media screen and (max-width: 500px) {
+    body {
+        font-size: 12px;
+    }
+}
+@media screen and (max-width: 400px) {
+    body {
+        font-size: 10px;
+    }
+    .content .results {
+        margin: 0;
+    }
+    .content .comment-filter {
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    overflow: hidden;
+}
+    .header-wrapper {
+        width: 100%;
+        background-color: #FFF;
+        box-shadow: 0 1px 1px 0 rgba(203, 208, 211, 1);
+    }
+        .header {
+            width: 100%;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 1em 2em;
+            user-select: none;
+        }
+            .title-icon {
+                width: 1.5em;
+                height: 1.5em;
+                vertical-align: middle;
+            }
+            .title {
+                display: inline-block;
+                margin: 0 0 0 0.6em;
+                font-size: 1em;
+                vertical-align: middle;
+                color: #323232;
+                cursor: default;
+            }
+    .controls {
+        margin: 0 2em;
+        width: calc(100% - 4em);
+        max-width: 1000px;
+    }
+        .comment-filter {
+            display: inline-block;
+            width: 20em;
+            padding: 0.5em 0.5em 0.5em 2em;
+            margin: 2em 0;
+            font-size: 0.7rem;
+            line-height: 1.5em;
+            border: 1px solid #C9CED2;
+            border-radius: 2px;
+            background: #FFF url(../../public/img/search.png) no-repeat 0.5em center;
+            background-size: 1.1em;
+        }
+        .rating-filter {
+            display: inline-block;
+            margin: 0 0 2em 0.5em;
+            font-size: 0.7rem;
+            cursor: default;
+            user-select: none;
+        }
+            .rating-filter-button {
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+                width: 1.6rem;
+                height: 1.6rem;
+                margin: 0 0.1rem;
+                border: 1px solid #C9CED2;
+                color: #5F646A;
+                background-color: transparent;
+                border-radius: 50%;
+                cursor: default;
+            }
+                .controls .rating-filter-button {
+                    cursor: pointer;
+                    outline: none;
+                }
+                .rating-filter-button.active {
+                    border-color: #03A5CB;
+                    background-color: #03A5CB;
+                    color: #FFF;
+                }
+    .results {
+        display: grid;
+        width: calc(100% - 4em);
+        max-width: 1000px;
+        grid-template-columns: 4em 5fr 2fr 2fr 2fr;
+        background-color: #FFF;
+        margin: 0 2em;
+        overflow-y: scroll;
+    }
+        .list-item-header {
+            padding: 1.5em;
+            font-size: 0.7em;
+            color: #323232;
+            text-transform: uppercase;
+        }
+        .list-item {
+            padding: 1.5em;
+            font-size: 0.7em;
+            line-height: 1.5em;
+            border-bottom: 1px solid #EFEFEF;
+            color: #323232;
+        }
+
+    .no-results {
+        margin: 0 2em;
+        width: calc(100% - 4em);
+        max-width: 1000px;
+    }
+        .notification {
+            font-size: 0.8em;
+            color: #555;
+            line-height: 2em;
+        }
+
+.loader-main {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: transparent url('../../public/img/loader.gif') no-repeat center center;
+}
+
+.hidden {
+    display: none !important;
+}
